@@ -1,4 +1,4 @@
-package arrayQueue;
+package dev.julia.queue.queue;
 
 public interface Queue <T> {
         void push(T element);    // Insere um elemento no fim da fila (enqueue).

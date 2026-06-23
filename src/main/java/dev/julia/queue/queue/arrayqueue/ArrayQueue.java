@@ -1,4 +1,6 @@
-package arrayQueue;
+package dev.julia.queue.queue.arrayqueue;
+
+import dev.julia.queue.queue.Queue;
 
 public class ArrayQueue<T> implements Queue<T> {
 

@@ -1,27 +1,46 @@
 package dev.julia.queue.exercises;
 
-import dev.julia.queue.queue.arrayqueue.ArrayQueue;
-import dev.julia.queue.stack.arraystack.arrayStack;
+public class Exercicio3<T> {
 
-public class Exercio3 <T> {
+        private T[] array;
+        private int capacidade;
+        private int count;
 
-     private T Array[];
-     private int capacidade;
-     private int count = 0;
+        public Exercicio3(int size) {
+            this.capacidade = size;
+            this.array = (T[]) new Object[capacidade];
+            this.count = 0;
+        }
 
-    public Exercio3(int size) {
+    public void push(T element) {
+        if (count == capacidade) {
+            System.out.println("Fila cheia");
+            return;
+        }
 
-        this.capacidade = size;
-        this.Array = (T[]) new Object[capacidade];
-        count = 0;
+        array[count] = element;
+        count++;
     }
 
+        public T popBack() {
+            if (count == 0) {
+                System.out.println("Estrutura vazia!");
+                return null;
+            }
 
-    public T popBack(){
-     T element = Array[count -1];
-     return  element;
-        
+            T element = array[count - 1];
+            array[count - 1] = null;
+            count--;
+
+            return element;
+        }
+
+        public boolean isEmpty() {
+            return count == 0;
+        }
+
+        public int size() {
+            return count;
+        }
     }
 
-
-}

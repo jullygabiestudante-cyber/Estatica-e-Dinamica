@@ -1,4 +1,0 @@
-package dev.julia.queue.stack.exercicises;
-
-public class ExercicioTeste4 {
-}

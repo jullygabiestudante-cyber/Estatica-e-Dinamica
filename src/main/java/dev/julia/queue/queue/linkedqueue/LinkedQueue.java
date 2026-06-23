@@ -1,6 +1,9 @@
-package linkedqueue;
+package dev.julia.queue.queue.linkedqueue;
 
-public class LinkedQueue<T> implements QueueL<T> {
+import dev.julia.queue.queue.Queue;
+
+
+public class LinkedQueue<T> implements Queue<T> {
 
     private Node<T> head;
     private Node<T> tail;
